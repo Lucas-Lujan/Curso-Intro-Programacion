@@ -5,3 +5,4 @@ submit.onclick = (e) =>{
     console.log(input.value)
     e.preventDefault()
 }
+

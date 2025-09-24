@@ -1,3 +1,41 @@
-*{
-    
-}
+
+    .prueba{
+        
+        color: red;
+        padding: 20px;
+        border: 2px solid;
+        margin: 10px; 
+        font-style: oblique;
+        text-decoration:underline;
+        font-weight: 100;
+        font-family:'Times New Roman', Times, serif;
+        text-transform: capitalize;
+      /* Modificaciones de prueba */
+    }
+      .prueba2 {
+        width: 200px;
+        height: 100px;
+        background-color: rgb(20, 28, 139);
+        z-index: 500;
+        position:absolute;
+
+
+      }
+     .hijo1{
+        width:500px;
+        height: 300px;
+        color: aqua;
+        position:relative;
+     }
+
+
+
+      .padre {
+        width: 200px;
+        height:150px;
+        color:blueviolet;
+      
+
+
+
+      }
