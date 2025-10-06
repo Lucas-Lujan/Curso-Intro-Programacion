@@ -1,0 +1,36 @@
+.azul {
+
+    background-color:blue;
+    height: 20px;
+    width: 10px;
+
+
+
+}
+
+.celda {
+
+    background-color:aquamarine;
+    height: 100px;
+    width: 100px;
+    outline: 10px solid blue;
+
+
+
+}
+
+.grilla {
+
+    display:flex;
+    flex-direction: column;
+    gap: 10px;
+    
+}
+
+.fila {
+
+    display: flex;
+    gap: 10px;
+
+
+}
