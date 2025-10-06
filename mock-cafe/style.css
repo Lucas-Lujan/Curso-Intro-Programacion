@@ -1,0 +1,78 @@
+*{box-sizing:border-box}
+body{
+  margin:0;   /* Quita margen por defecto del body */
+  font-family: Arial, sans-serif; /* Fuente por defecto (Arial) */
+  background: #fbf2e6; /* Color del fondo de la página */
+  color:#222; /* Color de texto principal */
+  padding: 12px;    /* Espacio lateral del documento */
+}
+
+
+header{
+  max-width:1100px;  /* Limita ancho del header en pantallas grandes */
+  margin: 0 auto;  /* Centra horizontalmente el header */
+  padding: 10px 0;
+  border-bottom: 2px solid #d8c0a2; /* Línea separadora bajo el header */
+}
+header h1{ margin:0; font-size:1.5rem; color:#5a2f09; }
+.sub{ margin:6px 0 0; color:#7a5a44; } /* Color del Subtítulo */
+
+
+.menu-grid{
+  max-width:1100px;   /* Limita ancho del contenido principal */
+  margin:18px auto;   /* Centra y separa del header */
+  display: grid;      /* Activa CSS Grid en el contenedor principal */
+  grid-template-columns: 1fr; /* Móvil: 1 columna por defecto */
+  gap: 16px;    /* Espacio entre las tarjetas/sections */
+}
+
+
+.categoria{
+  background:#fff;
+  border-radius:10px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.06);
+  overflow: hidden;
+}
+.categoria > h3{
+  margin:0;   /* Fondo blanco para "tarjeta" */
+  padding:10px 14px;  /* Padding interno de la barra superior */
+  color:#fff;  /* Texto en la barra superior en blanco */
+  font-size:1rem;   /* Tamaño del título de sección */
+  font-weight:700;    /* Negrita para el título */
+}
+/* contenido interior . Tamaño de lo de abajo */
+.categoria .contenido{
+  padding:12px 14px 16px;   /* Padding dentro de la tarjeta */
+}
+
+
+.producto{
+  display: grid;   /* Activa grid para cada fila de producto */
+  grid-template-columns: 1fr auto; /* Columna 1 = texto , Columna 2 = precio  */
+  gap: 6px 12px;   /* Espacio entre filas y columnas internas */
+  align-items: start;  /* Alinea inicio verticalmente */
+  padding:10px 0;    /* Espacio vertical por producto */
+  border-bottom: 1px solid #eee;  /* Línea separadora entre productos (esa transparente) */
+}
+.categoria .producto:last-child{ border-bottom: none; } /* Quita la línea al final de la lista */
+
+.producto .info h4{ margin:0 0 6px 0; font-size:1rem; } /* Nombre: pequeño margen abajo */
+.producto .info p{ margin:0; font-size:0.9rem; color:#666; line-height:1.3; }
+
+.precio{
+  justify-self: end; /* pega el precio a la derecha */
+  font-weight:700;
+  white-space:nowrap; /* Evita que el precio haga wrap en pantallas pequeñas */
+}
+
+/* colores de cada sección  */
+.categoria:nth-child(1) > h3{ background:#4e2a00; } /* cafetería */
+.categoria:nth-child(2) > h3{ background:#d67b1e; } /* panadería */
+
+
+@media (min-width: 481px){
+  .menu-grid{
+    grid-template-columns: repeat(2, 1fr); /* Desktop: 2 columnas iguales */
+    gap: 20px; /* Más espacio entre columnas en desktop */
+  }
+}
