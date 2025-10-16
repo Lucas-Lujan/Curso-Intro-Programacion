@@ -1,0 +1,15 @@
+//img.onclick = (ev) => {
+    //ev.target.src =
+  //  ev.target.value =
+
+//inp.onchange
+//inp.oninput
+
+
+}
+
+//img.style.opacity = ev.target.value
+//img.style.width = ´"${ev.tar.value}px´
+
+//filter: blur(${ev.target.value}px)
+//

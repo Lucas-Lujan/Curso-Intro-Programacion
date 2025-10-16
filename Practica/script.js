@@ -3,6 +3,10 @@ const span = document.getElementById("papualfa")
 const button = document.getElementById("button")
 const input = document.getElementById("input")
 const currentPlayerSpan = document.getElementById("current-player")
+const midiv = document.getElementById("midiv")
+const azul = document.getElementById("azul")
+const rojo = document.getElementById("rojo")
+const verde = document.getElementById("verde")
 const combinacionesGanadoras = [
     [0, 1, 2],
     [3, 4, 5],
@@ -80,9 +84,7 @@ for (let i = 0; i < celdas.length; i++) {
     celda.onclick = function (ev) {
         celda.classList.add("rojo")
         
-
         if (estado[i]) return
-
 
         ev.target.innerText = jugadorActual
         estado[i] = jugadorActual
@@ -91,15 +93,14 @@ for (let i = 0; i < celdas.length; i++) {
             combinacionesGanadoras.map(coso).some((item) => item),
             combinacionesGanadoras.some(coso)
         )
-        //combinacionesGanadoras.map(...).some((item) => !item) - ejemplo de un código
-
+    
         hayGanador = combinacionesGanadoras.some(coso)
 
         if (hayGanador) {
             alert(`El ganador es ${jugadorActual}`)
             return
         }
-
+ //combinacionesGanadoras.map(...).some((item) => !item) - ejemplo de un código
         //cambiar jugador
 
         if (jugadorActual === jugador1) {
@@ -119,6 +120,18 @@ for (let i = 0; i < celdas.length; i++) {
     
 
 }
+let valorRojo = 0
+function colorearDiv (){
+    
+    midiv.style.backgroundColor = `rgb(${valorRojo},100,100)`
+
+}
+
+rojo.onchange = (ev) => {
+    valorRojo = ev.target.value
+    colorearDiv()
+}
+
 
 
 // Supón que tienes 9 celdas con la clase "celda"
